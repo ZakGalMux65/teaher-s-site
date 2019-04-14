@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TeacherSite</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand row ">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item col">
+          <%= link_to 'Головна', home_index_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item col">
+          <a class="nav-link" href="#">Зв'язок</a>
+        </li>
+
+        <li class="nav-item col">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Навчальні матеріали
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to 'Підручники', books_path, class: 'dropdown-item' %>
+            <a class="dropdown-item" href="#">Презентації</a>
+            <a class="dropdown-item" href="#">Методичні матеріали</a>
+          </div>
+        </li>
+
+        <li class="nav-item col">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Домашні завдання
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"></a>
+            </div>
+          </li>
+
+        <li class="nav-item dropdown col">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Галерея
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Фото</a>
+            <a class="dropdown-item" href="#">Відео</a>
+            <%= link_to 'Наші досягнення', achievements_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+
+        <li class="nav-item col">
+          <a class="nav-link" href="#">Події</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Про автора</a>
+        </li>
+      </ul>
+
+      <span class="navbar-text col-auto align-self-center">
+        <%= link_to 'Sign in', new_user_session_path %>
+      </span>
+
+    </nav>
+
+    <div class="container_">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+    </div>
+  </body>
+</html>

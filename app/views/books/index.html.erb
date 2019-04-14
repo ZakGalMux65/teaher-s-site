@@ -1,0 +1,16 @@
+<% @books.each do |book| %>
+  <div class="row">
+    <div class="col-sm-8">
+      <%= image_tag @book.image %>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="row"><%= book.title %></h3>
+      <br>
+      <h6 class="row"><em><%= book.created_at %></em></h6>
+      <h6 class="row">
+        <em><%= link_to 'Детальніше', book_path(book) %></em>
+      </h6>
+    </div>
+  </div>
+  <hr>
+<% end %>

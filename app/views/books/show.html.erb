@@ -1,0 +1,15 @@
+<h1>
+  <%= @book.title%>
+</h1>
+
+<%= image_tag @book.image %>
+
+<p>
+  <%= @book.description %>
+</p>
+
+<em><%= link_to 'Завантажити', @book.file %></em>
+
+<h6>
+  <em><%= link_to 'Повернутися до всіх підручників', books_path %></em>
+</h6>

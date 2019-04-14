@@ -1,0 +1,41 @@
+// .vsc-initialized {
+//   // background-image: url("6.jpg");
+//   // background-size: cover;
+//   // background-repeat: no-repeat;
+//   // background-attachment: fixed;
+//   // background-position: fixed;
+//   // background-size: 100%;
+//   // display: grid;
+// }
+
+.body {
+  // background-color: rgba(199, 211, 207, 0.9);
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  left: 50px;
+  right: 50px;
+}
+
+
+.nav-link {
+  color: rgb(255, 255, 255);
+}
+
+.container_ {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+nav {
+  height: 100px;
+  position: fixed; //+
+  z-index: 333; //+
+  top: 0px; //+
+  // margin-bottom: 2%;
+  background-color: rgb(0, 63, 82); //+
+  // padding-right: 50px;
+  margin-top: 30px;
+  // margin-bottom: 30px;
+}
